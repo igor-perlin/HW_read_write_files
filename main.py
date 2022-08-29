@@ -24,7 +24,6 @@ def get_shop_list_by_dishes(dishes_list, person_count):
     for dish in dishes_list:
         if dish in cook_book:
             for el in cook_book[dish]:
-                # first variant
                 middle_dict = {'quantity': el['quantity'] * person_count, 'measure': el['measure']}
                 final_dict[el['ingredient_name']] = middle_dict
         else:
